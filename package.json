@@ -4,9 +4,9 @@
   "description": "Leave Management System Backend",
   "main": "dist/server.js",
   "scripts": {
-    "start": "node dist/server.js",
-    "dev": "nodemon --exec ts-node src/server.ts",
-    "build": "tsc",
+    "start": "node init && node dist/server.js",
+    "dev": "node init && nodemon --exec ts-node src/server.ts",
+    "build": "node init && tsc",
     "test": "jest"
   },
   "dependencies": {
@@ -19,7 +19,8 @@
     "moment": "^2.29.4",
     "mongoose": "^7.0.3",
     "multer": "^1.4.5-lts.1",
-    "node-cron": "^3.0.2"
+    "node-cron": "^3.0.2",
+    "node-fetch": "^3.3.2"
   },
   "devDependencies": {
     "@types/bcryptjs": "^2.4.2",
